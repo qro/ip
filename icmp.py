@@ -35,7 +35,7 @@ def validation(client): # i love you soverflow
 
 def ping(client):
     while not validation(client):
-        client = input(f"   ╠═[{Fore.RED}!{Fore.RESET}] Invalid")
+        client = input(f"{Fore.LIGHTBLACK_EX} [{Fore.RED}!{Fore.LIGHTBLACK_EX}] {Fore.RED}Make sure you entered a correct IP Address...{Fore.RESET}")
     else:
         while True:
             try:
