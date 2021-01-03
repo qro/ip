@@ -29,7 +29,7 @@ def main():
     
 {Fore.LIGHTBLACK_EX}   [{Fore.RED}1{Fore.LIGHTBLACK_EX}] ICMP Ping
 {Fore.LIGHTBLACK_EX}   [{Fore.RED}2{Fore.LIGHTBLACK_EX}] IP lookup
-{Fore.LIGHTBLACK_EX}   [{Fore.RED}3{Fore.LIGHTBLACK_EX}] Port Scan
+{Fore.LIGHTBLACK_EX}   [{Fore.RED}3{Fore.LIGHTBLACK_EX}] TCP Port Scan
     '''+Fore.RESET)
 
     print('')
