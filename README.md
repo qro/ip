@@ -6,7 +6,7 @@ An IP multi tool that has the ability to execute a ICMP Ping, detailed lookup on
 ![](https://cdn.discordapp.com/attachments/631162287968747550/795099703846109195/unknown.png)
 
 # Information
-Make sure to install any modules that are in all four files. Might add more features to this idk.
+The first file you should be running is "main.py". Make sure to install any modules that are in all four files. Might add more features to this idk.
 
 ## Support
 If you need help, dm the discord purelxw#6666 or the telegram t.me/purelxw
