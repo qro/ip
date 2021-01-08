@@ -9,4 +9,4 @@ An IP multi tool that has the ability to execute a ICMP Ping, detailed lookup on
 The first file you should be running is "main.py". Make sure to install any modules that are in all four files. Might add more features to this idk.
 
 ## Support
-If you need help, dm the discord purelxw#6666 or the telegram t.me/purelxw
+If you need help, dm the discord lawrence#0001 or the telegram t.me/purelxw
