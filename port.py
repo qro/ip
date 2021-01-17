@@ -1,5 +1,4 @@
 import socket
-import ctypes
 from concurrent import futures
 from colorama import Fore
 from time import sleep
@@ -29,10 +28,9 @@ def port_scanner(client, timeout):
            print(' [>] Listening on port: {}'.format(response.result())) # can't use colorama module because it messes up the braces for the port
 
 def main():
-   ctypes.windll.kernel32.SetConsoleTitleW("github.com/purelxw")
    print('')
-   client = input(f"{Fore.LIGHTBLACK_EX} [{Fore.RED}?{Fore.LIGHTBLACK_EX}] Enter IP Address: {Fore.LIGHTWHITE_EX}")
-   timeout = int(input(f"{Fore.LIGHTBLACK_EX} [{Fore.RED}?{Fore.LIGHTBLACK_EX}] Time out: {Fore.LIGHTWHITE_EX}"))
+   client = input(f" [{Fore.RED}?{Fore.RESET}] Enter IP Address: ")
+   timeout = int(input(f" [{Fore.RED}?{Fore.RESET}] Time out: "))
    print('')
    port_scanner(client, timeout)
 

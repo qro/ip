@@ -4,20 +4,31 @@
 import subprocess
 import os
 from os import system, name 
-import ctypes
 import sys
 from colorama import Fore
 import time
 from time import sleep
 
 def main():
-    ctypes.windll.kernel32.SetConsoleTitleW("github.com/purelxw")
     print('')
-    client = input(f"{Fore.LIGHTBLACK_EX} [{Fore.RED}?{Fore.LIGHTBLACK_EX}] Enter IP Address: {Fore.LIGHTWHITE_EX}")
+    client = input(f" [{Fore.RED}?{Fore.RESET}] Enter IP Address: ")
     print('')
     ping(client)
 
-def validation(client): # i love you soverflow
+def ping(client):
+    while not validation(client):
+        client = input(f" [{Fore.RED}!{Fore.RESET}] {Fore.RED}Make sure you entered a correct IP Address...{Fore.RESET}")
+    else:
+        while True:
+            try:
+                subprocess.check_call(f"PING {client} -n 1 | FIND \"TTL=\" > NUL",shell=True)
+                print(f" [{Fore.RED}>{Fore.RESET}] {Fore.GREEN}{client} is online!")
+            except subprocess.CalledProcessError:
+                print(f" [{Fore.RED}>{Fore.RESET}] {Fore.RED}{client} is offline!")
+            except KeyboardInterrupt:
+                main()
+
+def validation(client): # i love you stackoverflow
     i = 0
     valid = True
     for element in client:
@@ -32,18 +43,5 @@ def validation(client): # i love you soverflow
     if not i == 3:
         valid = False
     return valid 
-
-def ping(client):
-    while not validation(client):
-        client = input(f"{Fore.LIGHTBLACK_EX} [{Fore.RED}!{Fore.LIGHTBLACK_EX}] {Fore.RED}Make sure you entered a correct IP Address...{Fore.RESET}")
-    else:
-        while True:
-            try:
-                subprocess.check_call(f"PING {client} -n 1 | FIND \"TTL=\" > NUL",shell=True)
-                print(f"{Fore.LIGHTBLACK_EX} [{Fore.RED}>{Fore.LIGHTBLACK_EX}] {Fore.GREEN}{client} is online!")
-            except subprocess.CalledProcessError:
-                print(f"{Fore.LIGHTBLACK_EX} [{Fore.RED}>{Fore.LIGHTBLACK_EX}] {Fore.RED}{client} is offline!")
-            except KeyboardInterrupt:
-                main()
 
 main()
