@@ -3,6 +3,7 @@ from os import system, name
 import sys
 import time
 import colorama
+import ctypes
 from colorama import Fore
 
 if os.name == "nt":
@@ -16,16 +17,13 @@ def clear():
 
 def main():
     clear()
+    ctypes.windll.kernel32.SetConsoleTitleW('github.com/lxws')
     if len(sys.argv) < 2:
         os.system("clear || cls")
-        sys.stdout.write(f'''{Fore.RESET}
+        sys.stdout.write("
 
-    Author: purelxw
-    
-   [{Fore.RED}1{Fore.RESET}] ICMP Ping
-   [{Fore.RED}2{Fore.RESET}] IP lookup
-   [{Fore.RED}3{Fore.RESET}] TCP Port Scan
-    '''+Fore.RESET)
+    Author: lxws aka purelxw
+    ")
 
     print('')
     choice = input(f" [{Fore.RED}?{Fore.RESET}] Option: {Fore.LIGHTWHITE_EX}")

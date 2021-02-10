@@ -3,6 +3,7 @@
 
 import subprocess
 import os
+import ctypes
 from os import system, name 
 import sys
 from colorama import Fore
@@ -10,6 +11,7 @@ import time
 from time import sleep
 
 def main():
+    ctypes.windll.kernel32.SetConsoleTitleW('github.com/lxws')
     print('')
     client = input(f" [{Fore.RED}?{Fore.RESET}] Enter IP Address: ")
     print('')
@@ -22,9 +24,9 @@ def ping(client):
         while True:
             try:
                 subprocess.check_call(f"PING {client} -n 1 | FIND \"TTL=\" > NUL",shell=True)
-                print(f" [{Fore.RED}>{Fore.RESET}] {Fore.GREEN}{client} is online!")
+                print(f" [{Fore.RED}>{Fore.RESET}] {Fore.GREEN}{client} is online!{Fore.RESET}")
             except subprocess.CalledProcessError:
-                print(f" [{Fore.RED}>{Fore.RESET}] {Fore.RED}{client} is offline!")
+                print(f" [{Fore.RED}>{Fore.RESET}] {Fore.RED}{client} is offline!{Fore.RESET}")
             except KeyboardInterrupt:
                 main()
 
