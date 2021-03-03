@@ -5,7 +5,7 @@ from colorama import Fore
 from urllib.request import urlopen
 
 def main():
-    ctypes.windll.kernel32.SetConsoleTitleW('github.com/lxws')
+    ctypes.windll.kernel32.SetConsoleTitleW('ip multi tool by lozza')
     client = 1
 
     while True:

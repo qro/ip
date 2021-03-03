@@ -29,7 +29,7 @@ def port_scanner(client, timeout):
            print(' [>] Listening on port: {}'.format(response.result())) # can't use colorama module because it messes up the braces for the port
 
 def main():
-   ctypes.windll.kernel32.SetConsoleTitleW('github.com/lxws')
+   ctypes.windll.kernel32.SetConsoleTitleW('ip multi tool by lozza')
    print('')
    client = input(f" [{Fore.RED}?{Fore.RESET}] Enter IP Address: ")
    timeout = int(input(f" [{Fore.RED}?{Fore.RESET}] Time out: "))

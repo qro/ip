@@ -17,13 +17,13 @@ def clear():
 
 def main():
     clear()
-    ctypes.windll.kernel32.SetConsoleTitleW('github.com/lxws')
+    ctypes.windll.kernel32.SetConsoleTitleW('ip multi tool by lozza')
     if len(sys.argv) < 2:
         os.system("clear || cls")
-        sys.stdout.write("
+        sys.stdout.write(f'''{Fore.RESET}
 
-    Author: lxws aka purelxw
-    ")
+    Author: lozza
+    '''+Fore.RESET)
 
     print('')
     choice = input(f" [{Fore.RED}?{Fore.RESET}] Option: {Fore.LIGHTWHITE_EX}")
