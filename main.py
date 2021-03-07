@@ -17,12 +17,12 @@ def clear():
 
 def main():
     clear()
-    ctypes.windll.kernel32.SetConsoleTitleW('ip multi tool by lozza')
+    ctypes.windll.kernel32.SetConsoleTitleW('ip multi tool by purelxw')
     if len(sys.argv) < 2:
         os.system("clear || cls")
         sys.stdout.write(f'''{Fore.RESET}
 
-    Author: lozza
+    Author: purelxw
     '''+Fore.RESET)
 
     print('')

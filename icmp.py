@@ -11,7 +11,7 @@ import time
 from time import sleep
 
 def main():
-    ctypes.windll.kernel32.SetConsoleTitleW('ip multi tool by lozza')
+    ctypes.windll.kernel32.SetConsoleTitleW('ip multi tool by purelxw')
     print('')
     client = input(f" [{Fore.RED}?{Fore.RESET}] Enter IP Address: ")
     print('')
