@@ -3,7 +3,7 @@
 # IP Multi
 An IP multi tool that has the ability to execute a ICMP Ping, detailed lookup on the specified IP and look into the ports that are open in the IP.
 
-![](https://media.discordapp.net/attachments/779128625445863474/818258031937978368/unknown.png)
+![](https://media.discordapp.net/attachments/631162287968747550/829880728975310869/unknown.png)
 
 # Information
 The first file you should be running is "main.py". Make sure to install any modules that are in all four files. Might add more features to this idk.
