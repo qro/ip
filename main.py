@@ -138,7 +138,7 @@ def scan(client, timeout):
 
 def main():
     if len(sys.argv) < 2:
-        os.system('cls & mode 70, 12 & title ip multi tool │ by lxw (github.com/9xw)')
+        os.system('cls & mode 70, 12 & title ip multi tool │ by lozza (github.com/9xw)')
         sys.stdout.write('''
         
     [1] ICMP Ping
