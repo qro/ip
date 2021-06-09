@@ -1,4 +1,4 @@
-![](https://img.shields.io/github/watchers/9xw/ip-multi?style=social) ![](https://img.shields.io/github/stars/9xw/ip-multi?style=social) ![](https://img.shields.io/github/forks/9xw/ip-multi?style=social)
+![](https://img.shields.io/github/watchers/qro/ip-multi?style=social) ![](https://img.shields.io/github/stars/qro/ip-multi?style=social) ![](https://img.shields.io/github/forks/qro/ip-multi?style=social)
 
 # IP Multi
 An IP multi tool that has the ability to execute a ICMP Ping, check your own local IP, detailed lookup on the specified IP and look into the ports that are open in the IP.
