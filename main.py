@@ -99,7 +99,7 @@ def ping(client):
         client = input(" [!] Invalid, please try again: ")
     else:
         print(''' 
- [!] Press ctrl + c to stop.
+ [!] Press ctrl + c to stop
         ''')
         time.sleep(1)
         while True:
@@ -138,7 +138,7 @@ def scan(client, timeout):
 
 def main():
     if len(sys.argv) < 2:
-        os.system('cls & mode 70, 12 & title ip multi tool │ by lozza (github.com/9xw)')
+        os.system('cls & mode 70, 12 & title ip multi tool │ by lozza (github.com/qro)')
         sys.stdout.write('''
         
     [1] ICMP Ping
