@@ -6,4 +6,4 @@ An IP multi tool that has the ability to execute a ICMP Ping, check your own loc
 ![](https://cdn.discordapp.com/attachments/631162287968747550/852356764497608724/unknown.png)
 
 # Information
-- If you need any support, pm my <a href="https://discord.com/users/630087545312509963">discord</a> or <a href="https://t.me/lxw14274">telegram</a>.
+- If you need any support, pm my <a href="https://discord.com/users/630087545312509963">discord</a> or <a href="https://t.me/qro86">telegram</a>.
