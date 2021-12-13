@@ -1,23 +1,16 @@
-import os
-import sys
-import time
-import subprocess
-import json
-import socket
+import os, sys, time, subprocess, json, socket
 from urllib.request import urlopen
 from concurrent import futures
 
 def icmp():
     os.system('cls & mode 70, 40')
-    client = input('''
- [?] Enter IP address: ''')
+    client = input('\n [?] Enter IP address: ')
     ping(client)
 
 def lookup():
     os.system('cls & mode 70, 40')
     client = 1
-    client = input(f'''
- [?] Enter IP Address: ''')
+    client = input(f'\n [?] Enter IP Address: ')
     url1 = "http://ip-api.com/json/"
     url2 = "http://extreme-ip-lookup.com/json/"
     trackedip1 = urlopen(url1 + client)
@@ -27,27 +20,24 @@ def lookup():
     values1 = json.loads(data1)
     values2 = json.loads(data2)
     
-    print(f''' 
- [>] IP: ''' + values1['query'])
-    print(f" [>] City: " + values1['city'])
-    print(f" [>] Country: " + values1['country'])
-    print(f" [>] Name of the region: " + values1['regionName'])
-    print(f" [>] Region: " + values1['region'])
-    print(f" [>] ISP: " + values1['isp'])
-    print(f" [>] ZIP Code: " + values1['zip'])
-    print(f" [>] IP Type: " + values2['ipType'])
-    print(f" [>] Organisation: " + values2['org'])
-    print(f" [>] City: " + values2['city'])
-    print(f" [>] Latitude: " + values2['lat'])
-    print(f" [>] Longitude: " + values2['lon'])
+    print(f'\n [>] IP: ' + values1['query'])
+    print(f' [>] City: ' + values1['city'])
+    print(f' [>] Country: ' + values1['country'])
+    print(f' [>] Name of the region: ' + values1['regionName'])
+    print(f' [>] Region: ' + values1['region'])
+    print(f' [>] ISP: ' + values1['isp'])
+    print(f' [>] ZIP Code: ' + values1['zip'])
+    print(f' [>] IP Type: ' + values2['ipType'])
+    print(f' [>] Organisation: ' + values2['org'])
+    print(f' [>] City: ' + values2['city'])
+    print(f' [>] Latitude: ' + values2['lat'])
+    print(f' [>] Longitude: ' + values2['lon'])
 
-    x = input('''
- [?] x to go to menu: ''')
+    x = input('\n [?] x to go to menu: ')
     if x == 'x':
         main()
     else:
-        print(''' 
- [!] Invalid option''')
+        print('\n [!] Invalid option')
         time.sleep(0.5)
         lookup()
 
@@ -56,24 +46,20 @@ def localip():
     hostname = socket.gethostname()
     ip_address = socket.gethostbyname(hostname)
     
-    print(f'''
- [>] Hostname: {hostname}''')
-    print(f" [>] IP Address: {ip_address}")
+    print(f'\n [>] Hostname: {hostname}')
+    print(f' [>] IP Address: {ip_address}')
     
-    x = input('''
- [?] x to go to menu: ''')
+    x = input('\n [?] x to go to menu: ')
     if x == 'x':
         main()
     else:
-        print(''' 
- [!] Invalid option''')
+        print('\n [!] Invalid option')
         time.sleep(0.5)
         localip()
 
 def portscan():
     os.system('cls & mode 70, 30')
-    client = input('''
- [?] Enter IP Address: ''')
+    client = input('\n [?] Enter IP Address: ')
     timeout = int(input(" [?] Timeout: "))
     print("")
     scan(client, timeout)
@@ -98,16 +84,14 @@ def ping(client):
     while not validip(client):
         client = input(" [!] Invalid, please try again: ")
     else:
-        print(''' 
- [!] Press ctrl + c to stop
-        ''')
+        print('\n [!] Press ctrl + c to stop')
         time.sleep(1)
         while True:
             try:
                 subprocess.check_call(f"PING {client} -n 1 | FIND \"TTL=\" > NUL",shell=True)
-                print(f" [>] {client} is online!")
+                print(f' [>] {client} is online!')
             except subprocess.CalledProcessError:
-                print(f" [>] {client} is offline!")
+                print(f' [>] {client} is offline!')
             except KeyboardInterrupt:
                 icmp()
 
@@ -158,8 +142,7 @@ def main():
     elif choice == '4':
         portscan()
     else:
-        print(''' 
- [!] Invalid option''')
+        print('\n[!] Invalid option')
         time.sleep(0.5)
         main()
 
