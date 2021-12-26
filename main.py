@@ -146,4 +146,4 @@ def main():
         time.sleep(0.5)
         main()
 
-main()
+main(
