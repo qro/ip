@@ -37,3 +37,7 @@ class IP():
 if __name__ == '__main__':
     client = input('\n [?] Enter an IP address: ')
     IP().valid()
+    while not IP().valid():
+        input(client)
+    else:
+        IP().main()
