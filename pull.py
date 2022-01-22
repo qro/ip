@@ -47,18 +47,17 @@ class IP():
                 IP().main()
 
     def lookup(self):
-        os.system('cls & mode 70, 40')
-        url = 'http://ipwhois.app/json/'
-        ip = urlopen(url + self.client)
+        os.system('cls & mode 70, 20')
+        url = 'http://ip-api.com/json/'
+        ip = urlopen(url + (self.client))
         data = ip.read()
-        values = json.load(data)
-        input(f'\n [>] IP: ', values['ip'], '\n [>] ')
-        IP().main()
-
+        values = json.loads(data)
+        print(f'\n [>] IP: ', values['query'], '\n [>] City: ', values['city'], '\n [>] Country: ', values['country'], '\n [>] Name of the region: ', values['regionName'], '\n [>] Region: ', values['region'], '\n [>] ISP: ', values['isp'], '\n [>] ZIP Code: ', values['zip'], '\n [>] Organisation: ', values['org'], '\n')
+        input(), IP().main()
 
 if __name__ == '__main__':
     os.system('cls & mode 70, 12 & title ip │ by lozza (github.com/qro)')
-    client = input('\n [?] Enter an IP address: ')
+    client = input(f'\n [?] Enter an IP address: ')
     while not IP().valid():
         exit()
     else:
