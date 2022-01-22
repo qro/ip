@@ -16,7 +16,7 @@
  </p>
 
 ## 🛠️ Installation
-[Releases](https://github.com/qro/ip-multi/releases/tag/2.0.0) are available in this project, if you want to skip the whole installation process.
+[Releases](https://github.com/qro/ip/releases) are available in this project, if you want to skip the whole installation process.
 
 [Python](https://www.python.org/downloads/) must be installed on your computer; please get the most recent version.
 
