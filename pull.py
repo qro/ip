@@ -23,9 +23,7 @@ class IP():
         return valid
 
     def main(self):
-        os.system('cls & mode 70, 12 & title ip │ by lozza (github.com/qro)')
-        print('\n [1] ICMP Ping, [2] IP lookup, [3] Local IP\n')
-        option = (input('\n [?] Option: '))
+        option = input('\n [1] ICMP Ping, [2] IP lookup, [3] Local IP\n\n [?] Option: ')
         if option == '1':
             IP().ping()
         elif option == '2':
@@ -53,11 +51,12 @@ class IP():
         ip = urlopen(url + self.client)
         data = ip.read()
         values = json.load(data)
-        input(f'')
+        input(f'\n [>] IP: ', value[''])
         IP().main()
 
 
 if __name__ == '__main__':
+    os.system('cls & mode 70, 12 & title ip │ by lozza (github.com/qro)')
     client = input('\n [?] Enter an IP address: ')
     while not IP().valid():
         exit()
