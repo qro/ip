@@ -1,4 +1,6 @@
-import os, subprocess, json
+import os, subprocess, json, datetime
+from urllib.request import urlopen
+t = datetime.datetime.now()
 
 class IP():
     def __init__(self):
@@ -21,6 +23,7 @@ class IP():
         return valid
 
     def main(self):
+        os.system('cls & mode 70, 12 & title ip │ by lozza (github.com/qro)')
         print('\n [1] ICMP Ping, [2] IP lookup, [3] Local IP\n')
         option = (input('\n [?] Option: '))
         if option == '1':
@@ -28,7 +31,10 @@ class IP():
         elif option == '2':
             IP().lookup()
         elif option == '3':
-            IP().portscan()
+            IP().localip()
+        else: 
+            IP().main()
+
 
     def ping(self):
         print('test')
@@ -41,9 +47,23 @@ class IP():
             except KeyboardInterrupt:
                 IP().main()
 
+    def lookup(self):
+        os.system('cls & mode 70, 40')
+        url = 'http://ipwhois.app/json/'
+        ip = urlopen(url + self.client)
+        data = ip.read()
+        values = json.load(data)
+        print(f'''
+
+        ''')
+
+
 if __name__ == '__main__':
     client = input('\n [?] Enter an IP address: ')
     while not IP().valid():
         exit()
     else:
+        f = open("ip.txt", "a")
+        f.write(client + '\n')
+        f.close()
         IP().main()
