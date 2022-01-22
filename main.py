@@ -59,7 +59,7 @@ class IP():
         os.system('cls & mode 70, 12')
         hostname = socket.gethostname()
         ip_address = socket.gethostbyname(hostname)
-        input(f'\n [>] Hostname: {hostname}\n [>] Local IP: {ip_address}')
+        input(f'\n [>] Hostname: {hostname}\n [>] Local IP: {ip_address}\n')
         IP().main()
 
 if __name__ == '__main__':
