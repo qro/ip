@@ -1,4 +1,4 @@
-import os, subprocess, json, datetime
+import os, subprocess, json, datetime, socket
 from urllib.request import urlopen
 t = datetime.datetime.now()
 
@@ -43,7 +43,7 @@ class IP():
                 print(f' [>] {self.client} is online!')
             except subprocess.CalledProcessError:
                 print(f' [>] {self.client} is offline!')
-            except KeyboardInterrupt:
+            except KeyboardInterrupt: # ctrl + c 
                 IP().main()
 
     def lookup(self):
@@ -52,8 +52,15 @@ class IP():
         ip = urlopen(url + (self.client))
         data = ip.read()
         values = json.loads(data)
-        print(f'\n [>] IP: ', values['query'], '\n [>] City: ', values['city'], '\n [>] Country: ', values['country'], '\n [>] Name of the region: ', values['regionName'], '\n [>] Region: ', values['region'], '\n [>] ISP: ', values['isp'], '\n [>] ZIP Code: ', values['zip'], '\n [>] Organisation: ', values['org'], '\n')
-        input(), IP().main()
+        input(f'\n [>] IP: ', values['query'], '\n [>] City: ', values['city'], '\n [>] Country: ', values['country'], '\n [>] Name of the region: ', values['regionName'], '\n [>] Region: ', values['region'], '\n [>] ISP: ', values['isp'], '\n [>] ZIP Code: ', values['zip'], '\n [>] Organisation: ', values['org'], '\n')
+        IP().main()
+
+    def localip(self):
+        os.system('cls & mode 70, 12')
+        hostname = socket.gethostname()
+        ip_address = socket.gethostbyname(hostname)
+        input(f'\n [>] Hostname: {hostname}\n [>] Local IP: {ip_address}')
+        IP().main()
 
 if __name__ == '__main__':
     os.system('cls & mode 70, 12 & title ip │ by lozza (github.com/qro)')
