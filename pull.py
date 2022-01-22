@@ -23,6 +23,7 @@ class IP():
         return valid
 
     def main(self):
+        os.system('cls & mode 70, 12')
         option = input('\n [1] ICMP Ping, [2] IP lookup, [3] Local IP\n\n [?] Option: ')
         if option == '1':
             IP().ping()
@@ -35,7 +36,7 @@ class IP():
 
 
     def ping(self):
-        print('test')
+        os.system('cls & mode 70, 40')
         while True:
             try:
                 subprocess.check_call(f"PING {self.client} -n 1 | FIND \"TTL=\" > NUL",shell=True)
@@ -51,7 +52,7 @@ class IP():
         ip = urlopen(url + self.client)
         data = ip.read()
         values = json.load(data)
-        input(f'\n [>] IP: ', value[''])
+        input(f'\n [>] IP: ', values['ip'], '\n [>] ')
         IP().main()
 
 
