@@ -52,7 +52,7 @@ class IP():
         ip = urlopen(url + (self.client))
         data = ip.read()
         values = json.loads(data)
-        print(f'\n [>] IP: ', values['query'], '\n [>] City: ', values['city'], '\n [>] Country: ', values['country'] '\n [>] Name of the region: ', values['regionName'], '\n [>] Region: ', values['region'], '\n [>] ISP: ', values['isp'], '\n [>] ZIP Code: ', values['zip'], '\n [>] Organisation: ', values['org'], '\n')
+        print(f'\n [>] IP: ', values['query'], '\n [>] City: ', values['city'], '\n [>] Country: ', values['country'], '\n [>] Name of the region: ', values['regionName'], '\n [>] Region: ', values['region'], '\n [>] ISP: ', values['isp'], '\n [>] ZIP Code: ', values['zip'], '\n [>] Organisation: ', values['org'], '\n')
         input(), IP().main()
 
 if __name__ == '__main__':
