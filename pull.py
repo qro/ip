@@ -1,12 +1,10 @@
-import os, sys, time, subprocess, json
-from urllib.request import urlopen
-from concurrent import features
+import os, subprocess, json
 
 class IP():
     def __init__(self):
         self.client = client
 
-    def valid(self): # stack
+    def valid(self): 
         i = 0
         valid = True
         for element in self.client:
@@ -24,20 +22,28 @@ class IP():
 
     def main(self):
         print('\n [1] ICMP Ping, [2] IP lookup, [3] Local IP\n')
-        option = int(input('\n [?] Option: '))
+        option = (input('\n [?] Option: '))
         if option == '1':
-            ping(self.client)
+            IP().ping()
         elif option == '2':
             IP().lookup()
         elif option == '3':
             IP().portscan()
 
     def ping(self):
+        print('test')
+        while True:
+            try:
+                subprocess.check_call(f"PING {self.client} -n 1 | FIND \"TTL=\" > NUL",shell=True)
+                print(f' [>] {self.client} is online!')
+            except subprocess.CalledProcessError:
+                print(f' [>] {self.client} is offline!')
+            except KeyboardInterrupt:
+                IP().main()
 
 if __name__ == '__main__':
     client = input('\n [?] Enter an IP address: ')
-    IP().valid()
     while not IP().valid():
-        input(client)
+        exit()
     else:
         IP().main()
