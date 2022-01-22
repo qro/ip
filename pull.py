@@ -53,9 +53,8 @@ class IP():
         ip = urlopen(url + self.client)
         data = ip.read()
         values = json.load(data)
-        print(f'''
-
-        ''')
+        input(f'')
+        IP().main()
 
 
 if __name__ == '__main__':
@@ -64,6 +63,6 @@ if __name__ == '__main__':
         exit()
     else:
         f = open("ip.txt", "a")
-        f.write(client + '\n')
+        f.write(t.strftime("%H:%M:%S %d/%m/%Y : ") + '"' + client + '"' + '\n')
         f.close()
         IP().main()
