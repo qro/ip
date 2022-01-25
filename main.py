@@ -34,7 +34,6 @@ class IP():
         else: 
             IP().main()
 
-
     def ping(self):
         os.system('cls & mode 70, 40')
         while True:
