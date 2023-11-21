@@ -62,7 +62,7 @@ class IP():
         IP().main()
 
 if __name__ == '__main__':
-    os.system('cls & mode 70, 12 & title ip │ by lozza (github.com/qro)')
+    os.system('cls & mode 70, 12')
     client = input(f'\n [?] Enter an IP address: ')
     while not IP().valid():
         exit()
