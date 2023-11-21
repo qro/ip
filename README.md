@@ -43,4 +43,4 @@ $ python3 main.py
 ## ℹ️ Information
 - Removed the port scanner from `v1` because it's extremely unstable, but everything else should be cleaned up.
 - Added a function to create a `.txt` file and save all your sent ip's with the date and time, pretty useless but yeah.
-- If you need any support, pm my [telegram](https://t.me/afqro).
+- If you need any support, send me an email at qro.gh@pm.me or send me a pm my [telegram](https://t.me/ro32pTQHAs).
